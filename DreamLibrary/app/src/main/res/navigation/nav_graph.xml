@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_wishListFragment"
+            app:destination="@id/wishListFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_topListFragment"
+            app:destination="@id/topListFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_addOrEditBookItemDialogFragment"
+            app:destination="@id/addOrEditBookItemDialogFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_searchListFragment"
+            app:destination="@id/searchListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.listFragment.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_bookListFragment_to_bookItemDetailsFragment"
+            app:destination="@id/bookItemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.listFragment.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_wishListFragment_to_bookItemDetailsFragment"
+            app:destination="@id/bookItemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topListFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.listFragment.TopListFragment"
+        android:label="fragment_top_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_topListFragment_to_bookItemDetailsFragment"
+            app:destination="@id/bookItemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookItemDetailsFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.BookItemDetailsFragment"
+        android:label="BookItemDetailsFragment"
+        tools:layout="@layout/book_item_details">
+        <argument
+            android:name="bookItemId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_bookItemDetailsFragment_to_addOrEditBookItemDialogFragment"
+            app:destination="@id/addOrEditBookItemDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addOrEditBookItemDialogFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.AddOrEditBookItemDialogFragment"
+        android:label="AddOrEditBookItemDialogFragment"
+        tools:layout="@layout/dialog_new_book">
+        <argument
+            android:name="bookId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <argument
+            android:name="requestKey"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/searchListFragment"
+        android:name="hu.bme.aut.android.dreamlibrary.listFragment.SearchListFragment"
+        android:label="SearchListFragment"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_searchListFragment_to_bookItemDetailsFragment"
+            app:destination="@id/bookItemDetailsFragment" />
+        <argument
+            android:name="searchString"
+            app:argType="string" />
+    </fragment>
+</navigation>

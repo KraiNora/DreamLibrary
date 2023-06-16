@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">DreamLibrary</string>
+    <string name="main_title">Welcome to the Library of Your Dreams!</string>
+    <string name="bookList">Booklist</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="toplist">TOP 5 books</string>
+    <string name="empty">Empty list.</string>
+    <string name="add_new_book">Add a new book</string>
+    <string name="top_5_favourite_books">Top 5 favourite books</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="genre">Genre</string>
+    <string name="cover_string">Cover - Paste link of picture here</string>
+    <string name="already_read">Already read</string>
+    <string name="button_save_book">Save book</string>
+    <string name="add_new_book_to_the_library">Add new book to the library</string>
+    <string name="edit_book_in_the_library">Edit book in the library</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="description">Description</string>
+    <string name="state_of_reading">Already read it</string>
+    <string name="edit_book">Edit book</string>
+    <string name="review">Review</string>
+    <string name="rate_condition">Rate the book if you\'ve already read it</string>
+    <string name="searchlist">Results</string>
+    <string name="description_title">DESCRIPTION</string>
+    <string name="review_title">REVIEW</string>
+
+
+    <string-array name="genre_items">
+        <item>Adventure</item>
+        <item>Biography</item>
+        <item>Classics</item>
+        <item>Crime</item>
+        <item>Fantasy</item>
+        <item>Historical fiction</item>
+        <item>Humour</item>
+        <item>Mystery</item>
+        <item>Poetry</item>
+        <item>Plays</item>
+        <item>Romance</item>
+        <item>Science fiction</item>
+        <item>Self help</item>
+        <item>Thriller</item>
+    </string-array>
+
+</resources>
